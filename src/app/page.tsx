@@ -6,17 +6,6 @@ import Link from "next/link"
 import { toast } from "sonner"
 import { ChevronDown, Github, Menu, Moon, Sun } from "lucide-react"
 
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
@@ -117,46 +106,7 @@ export default function Home() {
         </header>
 
         <main className="flex-1">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-12 md:py-24 lg:py-32">
-            <div className="mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center">
-              <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                {content.home["home.Title"]}
-              </h1>
-              <p className="max-w-[750px] text-lg text-muted-foreground sm:text-xl">
-                {content.home['home.Subtitle']}
-              </p>
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <AlertDialog>
-                  <AlertDialogTrigger asChild>
-                    <Button size="lg">{content.home['home.GetStarted']}</Button>
-                  </AlertDialogTrigger>
-                  <AlertDialogContent>
-                    <AlertDialogHeader>
-                      <AlertDialogTitle>{content.dialog['dialog.Title']}</AlertDialogTitle>
-                      <AlertDialogDescription>
-                      {content.dialog['dialog.Description']}
-                      </AlertDialogDescription>
-                    </AlertDialogHeader>
-                    <AlertDialogFooter>
-                      <AlertDialogCancel>
-                        {content.dialog['dialog.Cancel']}
-                      </AlertDialogCancel>
-                      <AlertDialogAction onClick={() => toast.success("Template cloned successfully!")}>
-                      {content.dialog['dialog.CloneRepository']}
-                      </AlertDialogAction>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialog>
-                <Button variant="outline" size="lg" onClick={() => toast.info("Documentation opened")}>
-                  {content.home['home.Documentation']}
-                </Button>
-              </div>
-            </div>
-          </section>
-
-
-
+          
           {/* Features Section */}
           <section className="container mx-auto px-4 py-12 md:py-24 lg:py-32">
             <div className="mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center">
@@ -239,72 +189,6 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">
                 {content.subsection['subsection.FeatureDescriptionThree']}
                 </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Getting Started Section */}
-          <section className="container mx-auto px-4 py-12 md:py-24 lg:py-32 bg-muted/50">
-            <div className="mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center">
-              <h2 className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl">{content.templatestarter['templatestarter.Title']}</h2>
-              <p className="max-w-[750px] text-lg text-muted-foreground">
-              {content.templatestarter['templatestarter.Subtitle']}
-              </p>
-            </div>
-            <div className="mx-auto max-w-[980px] mt-12 px-4">
-              <div className="grid gap-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-background">
-                    <span className="text-sm font-bold">1</span>
-                  </div>
-                  <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">
-                      {content.templatestarter['templatestarter.Clone']}
-                    </h3>
-                    <p className="text-muted-foreground">
-                    {content.templatestarter['templatestarter.CloneSubTitle']}
-                    </p>
-                    <pre className="mt-2 rounded-md bg-slate-950 p-4 overflow-x-auto text-sm text-slate-50 dark:bg-slate-900">
-                      <code>{content.templatestarter['templatestarter.CloneRepository']}</code>
-                    </pre>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-background">
-                    <span className="text-sm font-bold">2</span>
-                  </div>
-                  <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">
-                      {content.templatestarter['templatestarter.Install']}
-                    </h3>
-                    <p className="text-muted-foreground">
-                    {content.templatestarter['templatestarter.InstallSubTitle']}
-                    </p>
-                    <pre className="mt-2 rounded-md bg-slate-950 p-4 overflow-x-auto text-sm text-slate-50 dark:bg-slate-900">
-                      <code>
-                        {content.templatestarter['templatestarter.InstallDependencies']}
-                      </code>
-                    </pre>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-background">
-                    <span className="text-sm font-bold">3</span>
-                  </div>
-                  <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">
-                      {content.templatestarter['templatestarter.Run']}
-                    </h3>
-                    <p className="text-muted-foreground">
-                    {content.templatestarter['templatestarter.RunSubTitle']}
-                    </p>
-                    <pre className="mt-2 rounded-md bg-slate-950 p-4 overflow-x-auto text-sm text-slate-50 dark:bg-slate-900">
-                      <code>
-                        {content.templatestarter['templatestarter.RunServer']}
-                      </code>
-                    </pre>
-                  </div>
-                </div>
               </div>
             </div>
           </section>

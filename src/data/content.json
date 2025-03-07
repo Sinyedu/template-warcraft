@@ -50,6 +50,7 @@
 
     "header": {
       "header.Title": "Template",
+      "header.Login": "Login",
       "header.Features": "Features",
       "header.GettingStarted": "Getting Started",
       "header.Resources": "Resources",
