@@ -1,4 +1,4 @@
-⚔️ Template-Warcraft ⚔️
+# ⚔️ Template-Warcraft ⚔️
 Welcome, brave developer, to the Template-Warcraft! This project was forged with the power of Next.js, bootstrapped using the mystical create-next-app. Prepare to embark on your coding quest! 🛡️
 
 🛠️ Getting Started
@@ -14,6 +14,8 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
+
 Then, march forth to http://localhost:3000 in your browser to witness the magic. ✨
 
 🔄 Hot Reloading:
