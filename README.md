@@ -39,7 +39,11 @@ Navigate to http://localhost:3000 to view the app.
 
 # 🗂️ File Structure
 This template uses a modular and scalable file structure:
+## 📁 Project Structure
 
+This template uses a modular and scalable file structure:
+
+```bash
 📦 src
 ├── 📂 app                # Application-specific logic
 │   ├── 📂 core           # Core modules like contexts, hooks, and utils
@@ -73,6 +77,7 @@ This template uses a modular and scalable file structure:
 ├── App.tsx               # Root component
 ├── main.tsx              # Entry point
 ├── routes.tsx            # Routing configuration
+```
 
 
 # ⚙️ Key Features
