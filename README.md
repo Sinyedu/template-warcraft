@@ -90,6 +90,10 @@ API Integration: api.ts to handle API requests using Axios or Fetch.
 Custom Hooks: Encourages reuse and clean code.
 
 TypeScript Support: Ensures type safety and better developer experience.
+
+Shadcn and Radix UI: Enables quicker development for developers without sacrificing quality.
+
+
 # 🖋️ Custom Fonts
 This template uses next/font for optimized font loading. To add or change fonts:
 
@@ -102,12 +106,16 @@ Create a new repository on GitHub.
 Click "Use this template" to create a copy of this repository.
 
 Clone your new repository and start coding!
+
+
 # 📄 Best Practices
 Components: Keep them small and focused. Prefer functional components.
 
 State Management: Use context for global state, and keep local state in components.
 
 API Calls: Centralize API logic in services to keep components clean.
+
+
 # 🚀 Deployment on Vercel
 To deploy your app:
 

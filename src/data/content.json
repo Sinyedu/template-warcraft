@@ -13,12 +13,14 @@
   "subsection": {
     "subsection.Title": "Features",
     "subsection.Subtitle": "Explore the amazing features of our application.",
-    "subsection.FeatureTitle": "Feature One",
-    "subsection.FeatureDescription": "Description for feature one.",
-    "subsection.FeatureTitleTwo": "Feature Two",
-    "subsection.FeatureDescriptionTwo": "Description for feature two.",
-    "subsection.FeatureTitleThree": "Feature Three",
-    "subsection.FeatureDescriptionThree": "Description for feature three."
+    "subsection.FeatureTitle": "Easy to use and customize",
+    "subsection.FeatureDescription": "A prebuilt design system that is easy to use and customize, with type safety",
+    "subsection.FeatureTitleTwo": "Premade file and folder structure for scalability",
+    "subsection.FeatureDescriptionTwo": "A premade file and folder structure that is scalable and easy to use for any project, big or small.",
+    "subsection.FeatureTitleThree": "Dark mode and light mode",
+    "subsection.FeatureDescriptionThree": "A dark mode and light mode that is easy to use and customize, with type safety.",
+    "subsection.FeatureTitleFour": "Shadcn and Radix UI",
+    "subsection.FeatureDescriptionFour": "A prebuilt design system that is easy to use and customize, with type safety."
   },
   "newsletter": {
     "newsletter.Title": "Subscribe to our Newsletter",
@@ -29,12 +31,12 @@
   "team": {
     "team.Title": "Our Team",
     "team.Subtitle": "Meet the amazing people behind this project.",
-    "team.MemberOne": "John Doe",
-    "team.MemberTwo": "Jane Smith",
-    "team.MemberThree": "Peter Jones",
-    "team.MemberFour": "Alice Brown",
-    "team.ProffesionOne": "Software Engineer",
-    "team.ProffesionTwo": "UI/UX Designer"
+    "team.MemberOne": "Simon Erik Nyblom",
+    "team.MemberTwo": "Ida Ballegaard",
+    "team.MemberThree": "Helena Kjeld",
+    "team.MemberFour": "Benjamin Viđ Garđ",
+    "team.ProffesionOne": "Lead Developer & Frontend Developer",
+    "team.ProffesionTwo": "UI/UX Designer & Digital Marketing"
   },
   "footer": {
     "footer.Github": "Github",

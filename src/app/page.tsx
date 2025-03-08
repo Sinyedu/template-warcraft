@@ -6,10 +6,9 @@ import content from "@/data/content.json"
 import Header from "@/components/layout/Header"
 import FeaturesSection from "@/components/layout/features-section"
 import NewsletterSection from "@/components/layout/newsletter-section"
-import TeamSection from "@/components/layout/Team-section"
 import Footer from "@/components/layout/Footer"
+import TeamSection from "@/components/layout/team-section"
 
-// Import components
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false)

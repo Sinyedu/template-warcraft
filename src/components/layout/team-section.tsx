@@ -33,7 +33,7 @@ export default function TeamSection({ content }: TeamSectionProps) {
         <div className="flex flex-col items-center gap-2">
           <Avatar className="h-24 w-24">
             <AvatarImage src="/placeholder.svg?height=96&width=96" alt="Team member" />
-            <AvatarFallback>AL</AvatarFallback>
+            <AvatarFallback>HK</AvatarFallback>
           </Avatar>
           <h3 className="text-xl font-bold">{content.team['team.MemberThree']}</h3>
           <p className="text-sm text-muted-foreground">{content.team['team.ProffesionTwo']}</p>

@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { ChevronDown, Github, Menu, Moon, Sun } from 'lucide-react'
 
@@ -23,7 +22,6 @@ export default function Header({ content, isDarkMode, toggleTheme }: HeaderProps
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2">
-          <Image src="/next.svg" alt="Next.js logo" width={80} height={20} className="dark:invert" />
           <span className="font-bold text-xl">{content.header["header.Title"]}</span>
         </div>
 
@@ -57,7 +55,7 @@ export default function Header({ content, isDarkMode, toggleTheme }: HeaderProps
             <Moon className="h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           </div>
           <Button asChild size="sm" variant="outline">
-            <Link href="https://github.com" className="gap-1">
+            <Link href="https://github.com/Sinyedu/template-warcraft" target="_blank" className="gap-1">
               <Github className="h-4 w-4" />
               {content.header['header.Github']}
             </Link>
