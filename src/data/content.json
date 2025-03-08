@@ -1,123 +1,45 @@
 {
-"home": {
-      "home.Title": "Modern Next.js Template",
-      "home.Subtitle": "A beautifully designed template with shadcn/ui components, ready for your next project.",
-      "home.GetStarted": "Get Started",
-      "home.Documentation": "Documentation"
-    },
-    "about": {
-      "about.Title": "About",
-      "about.Subtitle": "A simple template for a React application",
-      "about.Description": "This is a simple template for a React application. It includes a login and registration form, a header and footer, and a few other components. It is designed to be easy to use and customize, so you can quickly get started building your own React application."
-    },
-    "buttons": {
-      "buttons.Submit": "Submit",
-      "buttons.Cancel": "Cancel",
-      "buttons.Login": "Login",
-      "buttons.Register": "Register"
-    },
-    "auth": {
-      "login": {
-        "login.Title": "Login to Your Account",
-        "login.EmailPlaceholder": "Enter your email",
-        "login.PasswordPlaceholder": "Enter your password",
-        "login.ForgotPassword": "Forgot your password?",
-        "login.NoAccount": "Don't have an account?",
-        "login.SignUp": "Sign Up"
-      },
-      "register": {
-        "register.Title": "Create a New Account",
-        "register.NamePlaceholder": "Enter your name",
-        "register.EmailPlaceholder": "Enter your email",
-        "register.PasswordPlaceholder": "Create a password",
-        "register.ConfirmPasswordPlaceholder": "Confirm your password",
-        "register.HaveAccount": "Already have an account?",
-        "register.SignIn": "Sign In"
-      }
-    },
-    "messages": {
-      "messages.Welcome": "Welcome back!",
-      "messages.InvalidCredentials": "Invalid email or password",
-      "messages.RegistrationSuccess": "Registration successful! You can now log in."
-    },
-
-    "dialog": {
-      "dialog.Title": "Ready to begin?",
-      "dialog.CloneRepository": "Clone the repository",
-      "dialog.Cancel": "Cancel",
-      "dialog.Description": "This template includes everything you need to build a modern web application with Next.js and shadcn/ui."
-    },
-
-    "header": {
-      "header.Title": "Template",
-      "header.Login": "Login",
-      "header.Features": "Features",
-      "header.GettingStarted": "Getting Started",
-      "header.Resources": "Resources",
-      "header.Github": "Github",
-
-      "dropdown": {
-        "dropdown.Documentation": "Documentation",
-        "dropdown.Shadcn": "shadcn/ui",
-        "dropdown.Components": "Components"
-      }
-    },
-    "footer": {
-      "footer.Title": "Warcraft",
-      "footer.Home": "Home",
-      "footer.About": "About",
-      "footer.Contact": "Contact",
-      "footer.Login": "Login",
-      "footer.Register": "Register",
-      "footer.Discord": "Discord",
-      "footer.Twitter": "Twitter",
-      "footer.Github": "Github"
-      },
-
-    "subsection": {
-      "subsection.Title": "Features",
-      "subsection.Subtitle": "Everything you need to build beautiful, accessible web applications.",
-      "subsection.FeatureTitle": "Secure & Type-Safe",
-      "subsection.FeatureTitleTwo": "Accessible Components",
-      "subsection.FeatureTitleThree": "Dark Mode Support",
-      "subsection.FeatureDescription": "Built with TypeScript for type safety and modern security practices.",
-      "subsection.FeatureDescriptionTwo": "Beautiful UI components from shadcn/ui that are fully accessible.",
-      "subsection.FeatureDescriptionThree": "Built-in dark mode with easy toggling between light and dark themes."
-    },
-
-    "templatestarter": {
-      "templatestarter.Title": "Getting Started",
-      "templatestarter.Subtitle": "Follow these simple steps to get up and running with this template.",
-      "templatestarter.Clone": "Clone the Repository",
-      "templatestarter.CloneSubTitle": "Start by cloning this template repository to your local machine.",
-      "templatestarter.CloneRepository": "git clone https://github.com/yourusername/template.git my-project",
-      "templatestarter.Install": "Install Dependencies",
-      "templatestarter.InstallSubTitle": "Navigate to your project directory and install the dependencies.",
-      "templatestarter.InstallDependencies": "cd my-project npm install",
-      "templatestarter.Run": "Start the Development Server",
-      "templatestarter.RunSubTitle": "Run the development server and start building your application.",
-      "templatestarter.RunServer": "npm run dev"
-    },
-
-    "newsletter": {
-      "newsletter.Title": "Stay Updated",
-      "newsletter.Subtitle": "Subscribe to our newsletter to receive updates and new features.",
-      "newsletter.EmailPlaceholder": "Enter your email",
-      "newsletter.Subscribe": "Subscribe"
-    },
-
-    "team": {
-      "team.Title": "Our Team",
-      "team.Subtitle": "Meet the people behind this template.",
-      "team.MemberOne": "Simon Erik Nyblom",
-      "team.MemberTwo": "Ida Ballegaard",
-      "team.MemberThree": "Helena Kjeld",
-      "team.MemberFour": "Benjamin Viđ Garđ",
-      "team.ProffesionOne": "Lead Developer",
-      "team.ProffesionTwo": "Digital Marketing and UX/UI design"
+  "header": {
+    "header.Title": "My Website",
+    "header.GettingStarted": "Getting Started",
+    "header.Features": "Features",
+    "header.Github": "Github",
+    "dropdown": {
+      "dropdown.Documentation": "Documentation",
+      "dropdown.Shadcn": "Shadcn UI",
+      "dropdown.Components": "Components"
     }
-
-    
-
-
+  },
+  "subsection": {
+    "subsection.Title": "Features",
+    "subsection.Subtitle": "Explore the amazing features of our application.",
+    "subsection.FeatureTitle": "Feature One",
+    "subsection.FeatureDescription": "Description for feature one.",
+    "subsection.FeatureTitleTwo": "Feature Two",
+    "subsection.FeatureDescriptionTwo": "Description for feature two.",
+    "subsection.FeatureTitleThree": "Feature Three",
+    "subsection.FeatureDescriptionThree": "Description for feature three."
+  },
+  "newsletter": {
+    "newsletter.Title": "Subscribe to our Newsletter",
+    "newsletter.Subtitle": "Stay up to date with the latest news and updates.",
+    "newsletter.EmailPlaceholder": "Enter your email",
+    "newsletter.Subscribe": "Subscribe"
+  },
+  "team": {
+    "team.Title": "Our Team",
+    "team.Subtitle": "Meet the amazing people behind this project.",
+    "team.MemberOne": "John Doe",
+    "team.MemberTwo": "Jane Smith",
+    "team.MemberThree": "Peter Jones",
+    "team.MemberFour": "Alice Brown",
+    "team.ProffesionOne": "Software Engineer",
+    "team.ProffesionTwo": "UI/UX Designer"
+  },
+  "footer": {
+    "footer.Github": "Github",
+    "footer.Twitter": "Twitter",
+    "footer.Discord": "Discord"
+  }
 }
+
