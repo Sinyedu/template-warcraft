@@ -40,10 +40,6 @@ Navigate to http://localhost:3000 to view the app.
 # 🗂️ File Structure
 This template uses a modular and scalable file structure:
 
-bash
-Copy
-Edit
-
 📦 src
 ├── 📂 app                # Application-specific logic
 │   ├── 📂 core           # Core modules like contexts, hooks, and utils
