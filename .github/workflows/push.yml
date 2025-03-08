@@ -1,0 +1,40 @@
+name: Code Check on Push
+
+on:
+  push:
+    branches:
+      - main  # You can change this to the branch you want to track
+  pull_request:
+    branches:
+      - main  # This will run checks on PRs targeting the main branch
+
+jobs:
+  check-code:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  # Adjust the Node version if needed
+
+    - name: Install dependencies
+      run: |
+        npm install  # Installs dependencies from package.json
+
+    - name: Run ESLint (check code quality)
+      run: |
+        npm run lint  # Runs the ESLint command (next lint)
+
+    - name: Set Git config dynamically
+      run: |
+        git config --global user.name "${{ github.actor }}"
+        git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+    - name: Push code (if all checks pass)
+      if: success()
+      run: |
+        git push origin main  # Adjust branch as needed
