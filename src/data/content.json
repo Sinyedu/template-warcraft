@@ -1,13 +1,13 @@
 {
   "header": {
-    "header.Title": "My Website",
-    "header.GettingStarted": "Getting Started",
-    "header.Features": "Features",
-    "header.Github": "Github",
+    "header.Title": "Warcraft III Risk Reforged",
+    "header.GettingStarted": "How to play the game",
+    "header.Features": "Leaderboard",
+    "header.Github": "Forums",
     "dropdown": {
-      "dropdown.Documentation": "Documentation",
-      "dropdown.Shadcn": "Shadcn UI",
-      "dropdown.Components": "Components"
+      "dropdown.RealTime": "Real time",
+      "dropdown.Current": "Current",
+      "dropdown.LastWeek": "Last Week"
     }
   },
   "subsection": {
@@ -42,6 +42,24 @@
     "footer.Github": "Github",
     "footer.Twitter": "Twitter",
     "footer.Discord": "Discord"
+  },
+
+  "streams":
+  {
+    "streams.Title": "Popular Streams"
+  },
+  "informationalVideos": {
+    "informationalVideos.Title": "How to Play Warcraft III Risk Reforged",
+    "informationalVideos.Subtitle": "Watch these informative videos to understand how to play and master the game!",
+    "informationalVideos.VideoTitle1": "Getting Started with Warcraft III Risk",
+    "informationalVideos.VideoDescription1": "Learn the basics of the game, how to set up, and the initial strategies to win.",
+    "informationalVideos.VideoTitle2": "Mastering Advanced Strategies",
+    "informationalVideos.VideoDescription2": "Take your gameplay to the next level with advanced strategies and tactics.",
+    "informationalVideos.VideoTitle3": "Multiplayer Tips and Tricks",
+    "informationalVideos.VideoDescription3": "Learn how to work with your team in multiplayer mode and outsmart your opponents.",
+    "informationalVideos.VideoTitle4": "Understanding Different Game Modes",
+    "informationalVideos.VideoDescription4": "Explore the various game modes available in Warcraft III Risk and how to best use them.",
+    "informationalVideos.Subscribe": "Subscribe for More Tips!"
   }
 }
 

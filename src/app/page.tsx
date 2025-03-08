@@ -5,9 +5,9 @@ import { toast } from "sonner"
 import content from "@/data/content.json"
 import Header from "@/components/layout/Header"
 import FeaturesSection from "@/components/layout/features-section"
-import NewsletterSection from "@/components/layout/newsletter-section"
 import Footer from "@/components/layout/Footer"
 import TeamSection from "@/components/layout/team-section"
+import InformationalVideosSection from "@/components/layout/informational-videos"
 
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
           <FeaturesSection content={content} />
 
           {/* Newsletter Section */}
-          <NewsletterSection content={content} />
+          <InformationalVideosSection content={content} />
 
           {/* Team Section */}
           <TeamSection content={content} />

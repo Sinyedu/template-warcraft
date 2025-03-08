@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ChevronDown, Github, Menu, Moon, Sun } from 'lucide-react'
+import { ChevronDown, Menu, Moon, Sun } from 'lucide-react'
 
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
@@ -39,13 +39,13 @@ export default function Header({ content, isDarkMode, toggleTheme }: HeaderProps
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem asChild>
-                <Link href="https://nextjs.org/docs">{content.header.dropdown['dropdown.Documentation']}</Link>
+                <Link href="https://nextjs.org/docs" target="_blank">{content.header.dropdown['dropdown.RealTime']}</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="https://github.com/shadcn-ui/ui">{content.header.dropdown['dropdown.Shadcn']}</Link>
+                <Link href="https://github.com/shadcn-ui/ui" target="_blank">{content.header.dropdown['dropdown.Current']}</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="https://ui.shadcn.com/docs">{content.header.dropdown['dropdown.Components']}</Link>
+                <Link href="https://ui.shadcn.com/docs" target="_blank">{content.header.dropdown['dropdown.LastWeek']}</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -56,7 +56,7 @@ export default function Header({ content, isDarkMode, toggleTheme }: HeaderProps
           </div>
           <Button asChild size="sm" variant="outline">
             <Link href="https://github.com/Sinyedu/template-warcraft" target="_blank" className="gap-1">
-              <Github className="h-4 w-4" />
+              
               {content.header['header.Github']}
             </Link>
           </Button>
