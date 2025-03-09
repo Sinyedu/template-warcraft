@@ -11,11 +11,7 @@ Clone the Repository:
 git clone <your-repo-url>
 cd <your-repo-name>
 Install Dependencies:
-```
 
-bash
-Copy
-Edit
 npm install
 # or
 yarn install
@@ -23,11 +19,11 @@ yarn install
 pnpm install
 # or
 bun install
+```
+
+```
 Run the Development Server:
 
-bash
-Copy
-Edit
 npm run dev
 # or
 yarn dev
@@ -35,7 +31,9 @@ yarn dev
 pnpm dev
 # or
 bun dev
-Navigate to http://localhost:3000 to view the app.
+```
+
+# Navigate to http://localhost:3000 to view the app.
 
 # 🗂️ File Structure
 This template uses a modular and scalable file structure:
