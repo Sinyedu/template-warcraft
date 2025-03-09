@@ -1,55 +1,33 @@
-name: CI Pipeline
-
-on:
-  push:
-    branches:
-      - main
-      - '**/feature/*'
-  pull_request:
-    branches:
-      - main
-
 jobs:
-  lint-and-test:
-    name: Lint and Test
+  integration-delivery:
     runs-on: ubuntu-latest
-
+    environment: Test
+    container:
+      image: node
     steps:
-      # Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      # Cache Node modules
-      - name: Cache Node modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      # Install dependencies
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      # Run ESLint for code quality checks
-      - name: Run ESLint
-        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+      - name: Build website
+        run: npm run build
 
-      # Run TestCafe tests
-      - name: Run TestCafe tests
-        run: npx testcafe chrome tests/e2e-tests.js
+      - name: Install TestCafe
+        run: npm install -g testcafe
 
-      # Upload test results (optional)
-      - name: Archive TestCafe reports
-        if: always()
+      - name: Update APT
+        run: apt-get update
+
+      - name: Install Chromium
+        run: apt-get install -y chromium
+
+      - name: Run tests
+        run: testcafe chromium:headless test/*
+
+      - name: Store artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: testcafe-reports
-          path: testcafe-reports/
+          name: dist
+          path: dist/
