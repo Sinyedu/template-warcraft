@@ -46,22 +46,30 @@ jobs:
       - name: Install TestCafe
         run: npm install -g testcafe
 
-      # Update APT
-      - name: Update APT
-        run: apt-get update
+      # Update APT and install Chromium dependencies
+      - name: Install Chromium and dependencies
+        run: |
+          apt-get update
+          apt-get install -y chromium
+          apt-get install -y libnss3 libxss1 libgconf-2-4 libasound2 fonts-liberation libappindicator3-1
+          apt-get install -y xvfb  # X virtual framebuffer
 
-      # Install Chromium
-      - name: Install Chromium
-        run: apt-get install -y chromium
-
-      # Run TestCafe tests in headless mode
+      # Run TestCafe tests in headless mode using xvfb-run
       - name: Run tests
-        run: testcafe 'chromium --no-sandbox':headless tests/*
+        run: xvfb-run --auto-servernum testcafe 'chromium --no-sandbox --disable-dev-shm-usage':headless tests/*
 
-      # Archive TestCafe reports (optional but useful)
+      # Archive TestCafe reports (updated to v4)
       - name: Archive TestCafe reports
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4  # Updated to v4
         with:
           name: testcafe-reports
           path: testcafe-reports/
+
+      # Upload coverage report if using coverage tools like Istanbul (updated to v4)
+      - name: Upload Coverage Report
+        if: success()
+        uses: actions/upload-artifact@v4  # Updated to v4
+        with:
+          name: coverage-report
+          path: coverage/
