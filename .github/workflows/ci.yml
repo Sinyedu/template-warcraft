@@ -1,33 +1,67 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - '**/feature/*'
+  pull_request:
+    branches:
+      - main
+
 jobs:
   integration-delivery:
     runs-on: ubuntu-latest
     environment: Test
     container:
       image: node
+
     steps:
+      # Checkout code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm install
+      # Cache Node modules for faster builds
+      - name: Cache Node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Run ESLint for code quality checks
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+
+      # Build website
       - name: Build website
         run: npm run build
 
+      # Install TestCafe globally
       - name: Install TestCafe
         run: npm install -g testcafe
 
+      # Update APT
       - name: Update APT
         run: apt-get update
 
+      # Install Chromium
       - name: Install Chromium
         run: apt-get install -y chromium
 
+      # Run TestCafe tests in headless mode
       - name: Run tests
-        run: testcafe chromium:headless test/*
+        run: testcafe 'chromium --no-sandbox':headless tests/*
 
-      - name: Store artifacts
+      # Archive TestCafe reports (optional but useful)
+      - name: Archive TestCafe reports
+        if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: dist
-          path: dist/
+          name: testcafe-reports
+          path: testcafe-reports/
