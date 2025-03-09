@@ -3,7 +3,6 @@ import { Selector, ClientFunction } from 'testcafe';
 // eslint-disable-next-line @typescript-eslint/no-unused-expressions
 fixture`React Project Tests`.page`http://localhost:3000`;
 
-// Helper to get page title
 const getPageTitle = ClientFunction(() => document.title);
 
 // Test InformationalVideosSection Component

@@ -56,7 +56,8 @@ jobs:
 
       # Run TestCafe tests in headless mode using xvfb-run
       - name: Run tests
-        run: xvfb-run --auto-servernum testcafe 'chromium --no-sandbox --disable-dev-shm-usage':headless tests/*
+        run: xvfb-run --auto-servernum testcafe 'chromium --no-sandbox --disable-dev-shm-usage':headless src/tests/*.js
+
 
       # Archive TestCafe reports (updated to v4)
       - name: Archive TestCafe reports
